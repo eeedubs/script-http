@@ -6,6 +6,7 @@ function getAndPrintHTMLChunks () {
     host: 'sytantris.github.io',
     path: '/http-examples/step1.html'
   };
+  // gets the host and the path
 
   https.get(requestOptions, function (response) {
     response.setEncoding('utf8');
