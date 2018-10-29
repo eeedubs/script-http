@@ -8,10 +8,9 @@ function getHTML (options, callback) {
     response.setEncoding('utf8');
     response.on('data', function (data){
       buf += data;
-      console.log("Chunk Received. Length:", buf);
     });
     response.on('end', function() {
-      console.log("Response stream complete.");
+      callback(buf);
     });
   });
 }
